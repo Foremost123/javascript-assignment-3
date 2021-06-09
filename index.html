@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #square{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="funct()">Click Me</button>
+    <h2>Yo</h2>
+    <div id="square">
+    </div>
+    <script>
+        var colorArr=["red","blue","yellow","black","green"]
+        function funct(){
+            var i=Math.floor(Math.random()*5)
+            var elem=document.getElementById("square");
+            elem.innerHTML=colorArr[i];
+        }
+    </script>
+</body>
+</html>
