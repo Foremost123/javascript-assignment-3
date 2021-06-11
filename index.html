@@ -7,23 +7,32 @@
     <title>Document</title>
     <style>
         #square{
-            height: 100px;
-            width: 100px;
+            height: 200px;
+            width:200px;
             background-color: red;
+            margin: auto;
+        }
+        .forButton{
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
+    <div class="forButton">
     <button onclick="funct()">Click Me</button>
-    <h2>Yo</h2>
+    </div>      
+    <h2 style="text-align: center;">Yo</h2>
     <div id="square">
     </div>
     <script>
         var colorArr=["red","blue","yellow","black","green"]
         function funct(){
             var i=Math.floor(Math.random()*5)
+            var text1=document.getElementsByTagName("h2")
+            text1[0].innerHTML=colorArr[i];
             var elem=document.getElementById("square");
-            elem.innerHTML=colorArr[i];
+            elem.style.backgroundColor=colorArr[i];
         }
     </script>
 </body>
